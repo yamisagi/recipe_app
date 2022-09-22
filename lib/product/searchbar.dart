@@ -15,7 +15,7 @@ class SearchBar extends StatelessWidget {
           hintText: 'Search recipes',
           hintStyle: TextStyle(
             color: Colors.grey,
-            fontSize: 20,
+            fontSize: 18,
           ),
           prefixIcon: Icon(
             Icons.search,

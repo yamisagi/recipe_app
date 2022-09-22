@@ -41,24 +41,36 @@ class DummyData {
     ),
   );
 
+  static final List<String> dummyCategories = [
+    'ENTREES',
+    'APPS',
+    'MEATS',
+    'VEGAN',
+    'SALADS',
+  ];
+
   static final List<RecipeModel> items = [
     RecipeModel(
+      foodServing: '2 Servings',
+      foodTime: '30 min',
       cardColor: Colors.orange.shade500,
       foodName: 'Pasta Primavera',
       foodImage: 'assets/pasta_primavera.png',
       foodDescription: 'Null',
       foodIngredients: 'Null',
       foodCalories: 'Null',
-      foodReviews: 'Null',
+      foodReviews: '201 Reviews',
     ),
     RecipeModel(
+      foodServing: '2 Servings',
+      foodTime: '28 min',
       cardColor: const Color.fromARGB(255, 163, 113, 131),
       foodName: 'Pork Stir Fry',
       foodImage: 'assets/pork_stir_fry.png',
       foodDescription: 'Null',
       foodIngredients: 'Null',
       foodCalories: 'Null',
-      foodReviews: 'Null',
+      foodReviews: '347 Reviews',
     )
   ];
 }

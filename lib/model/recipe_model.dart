@@ -8,8 +8,12 @@ class RecipeModel {
   final String foodCalories;
   final String foodReviews;
   final Color cardColor;
+  final String foodTime;
+  final String foodServing;
 
   RecipeModel({
+    required this.foodServing,
+    required this.foodTime,
     required this.cardColor,
     required this.foodName,
     required this.foodImage,
