@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 class BottomBar extends StatelessWidget {
   const BottomBar({
     Key? key,
+    required this.iconColor,
   }) : super(key: key);
-
+  final Color iconColor;
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      selectedItemColor: Colors.white,
+      selectedItemColor: iconColor,
       items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
@@ -32,11 +33,11 @@ class BottomBar extends StatelessWidget {
           backgroundColor: Colors.transparent,
         ),
       ],
-      backgroundColor: Colors.white,
+      backgroundColor: iconColor,
       elevation: 0,
       showSelectedLabels: false,
       showUnselectedLabels: false,
-      unselectedItemColor: Colors.white,
+      unselectedItemColor: iconColor,
     );
   }
 }

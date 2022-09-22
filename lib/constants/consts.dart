@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Constants {
   // ---------STRING CONSTANTS---------
@@ -14,5 +15,10 @@ class Constants {
     height: 1,
     width: 180,
     color: Colors.white,
+  );
+  static final headerTextStyle = GoogleFonts.nunito(
+    fontSize: 45,
+    fontWeight: FontWeight.bold,
+    color: Constants.scaffoldColor,
   );
 }

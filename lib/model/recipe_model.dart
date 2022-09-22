@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class RecipeModel {
   final String foodName;
   final String foodImage;
-  final String foodDescription;
-  final String foodIngredients;
+  final List foodDescription;
+  final List foodIngredients;
   final String foodCalories;
   final String foodReviews;
   final Color cardColor;

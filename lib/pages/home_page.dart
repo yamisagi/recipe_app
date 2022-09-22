@@ -14,7 +14,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: const BottomBar(),
+      bottomNavigationBar: const BottomBar(
+        iconColor: Colors.white,
+      ),
       backgroundColor: Constants.scaffoldColor,
       appBar: const ProductAppBar(
         isHomePage: true,

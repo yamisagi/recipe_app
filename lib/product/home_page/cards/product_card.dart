@@ -41,6 +41,10 @@ class ProductCard extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) => RecipePage(
+                            foodDescription:
+                                DummyData.items[index].foodDescription,
+                            foodIngredients:
+                                DummyData.items[index].foodIngredients,
                             foodCalories: DummyData.items[index].foodCalories,
                             foodReviews: DummyData.items[index].foodReviews,
                             foodServing: DummyData.items[index].foodServing,
