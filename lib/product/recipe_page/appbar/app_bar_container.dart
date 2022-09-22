@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_ui/constants/consts.dart';
 
 class AppBarContainer extends StatelessWidget {
   const AppBarContainer({
@@ -13,10 +14,7 @@ class AppBarContainer extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: cardColor,
-        borderRadius: const BorderRadius.only(
-          bottomLeft: Radius.circular(20),
-          bottomRight: Radius.circular(20),
-        ),
+        borderRadius: Constants.recipePageAppBarRadius,
       ),
       height: MediaQuery.of(context).size.height * 0.4,
     );

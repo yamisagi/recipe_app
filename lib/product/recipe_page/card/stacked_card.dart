@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:recipe_ui/constants/consts.dart';
 import 'package:recipe_ui/product/recipe_page/appbar/app_bar_container.dart';
+import 'package:recipe_ui/product/recipe_page/card/positioned_recipe.dart';
 
-import '../row/recipe_row.dart';
 
 class RecipeStackedCard extends StatelessWidget {
   const RecipeStackedCard({
@@ -45,50 +43,12 @@ class RecipeStackedCard extends StatelessWidget {
             ),
           ),
         ),
-        Positioned(
-          top: 125,
-          left: 15,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                foodName,
-                style: GoogleFonts.nunito(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              Constants.spacer,
-              Constants.divider,
-              Constants.spacer,
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  RecipeRows(
-                    icon: Icons.timer,
-                    title: foodTime,
-                  ),
-                  Constants.spacer,
-                  RecipeRows(
-                    title: foodServing,
-                    icon: Icons.person,
-                  ),
-                  Constants.spacer,
-                  RecipeRows(
-                    title: foodCalories,
-                    icon: Icons.local_fire_department_outlined,
-                  ),
-                  Constants.spacer,
-                  RecipeRows(
-                    title: foodReviews,
-                    icon: Icons.star,
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
+        PositionedRecipe(
+            foodName: foodName,
+            foodTime: foodTime,
+            foodServing: foodServing,
+            foodCalories: foodCalories,
+            foodReviews: foodReviews),
       ],
     );
   }

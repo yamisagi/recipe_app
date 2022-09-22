@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:recipe_ui/constants/consts.dart';
+import 'package:recipe_ui/constants/text_styles.dart';
 
 class RecipeRows extends StatelessWidget {
   final String title;
@@ -15,17 +16,13 @@ class RecipeRows extends StatelessWidget {
     return Align(
       child: Row(
         children: [
-          Icon(icon, color: Colors.white),
+          Icon(icon, color: Constants.whiteColor),
           const SizedBox(
             width: 10,
           ),
           Text(
             title,
-            style: GoogleFonts.nunito(
-              fontSize: 15,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
+            style: ProductTextStyles.recipeSubtitleTextStyle,
           ),
         ],
       ),

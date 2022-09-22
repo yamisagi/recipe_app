@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_ui/constants/consts.dart';
+import 'package:recipe_ui/constants/text_styles.dart';
 
 class SearchBar extends StatelessWidget {
   const SearchBar({
@@ -7,39 +9,22 @@ class SearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
       child: TextField(
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.all(8),
-          hintText: 'Search recipes',
-          hintStyle: TextStyle(
-            color: Colors.grey,
-            fontSize: 18,
-          ),
-          prefixIcon: Icon(
+          contentPadding: Constants.searchPadding,
+          hintText: Constants.searchHint,
+          hintStyle: ProductTextStyles.searchTextStyle,
+          prefixIcon: const Icon(
             Icons.search,
             color: Colors.grey,
-            size: 20,
+            size: 18,
           ),
           filled: true,
-          fillColor: Colors.white,
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(8),
-            ),
-            borderSide: BorderSide(
-              color: Colors.white,
-            ),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(8),
-            ),
-            borderSide: BorderSide(
-              color: Colors.white,
-            ),
-          ),
+          fillColor: Constants.whiteColor,
+          enabledBorder: Constants.searchBorder,
+          focusedBorder: Constants.searchBorder,
         ),
       ),
     );

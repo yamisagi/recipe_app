@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:recipe_ui/constants/consts.dart';
 import 'package:recipe_ui/product/dummy_data.dart';
 import 'package:recipe_ui/product/home_page/rows/icon_row.dart';
 
@@ -34,7 +35,7 @@ class PositionedRow extends StatelessWidget {
             ),
             height: 1,
             width: 120,
-            color: Colors.white,
+            color: Constants.whiteColor,
           ),
           Row(
             children: [

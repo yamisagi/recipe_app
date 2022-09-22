@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:recipe_ui/constants/consts.dart';
+import 'package:recipe_ui/constants/text_styles.dart';
 
 class IconRows extends StatelessWidget {
   final int index;
@@ -16,21 +17,17 @@ class IconRows extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 5),
+      padding: Constants.iconRowpadding,
       child: Row(
         children: [
           Icon(
             icon,
-            color: Colors.white,
+            color: Constants.iconColor,
           ),
-          Text(
-            text,
-            style: GoogleFonts.nunito(
-              color: Colors.white,
-              fontSize: 12,
-              fontWeight: FontWeight.w600,
-            ),
+          const SizedBox(
+            width: 5,
           ),
+          Text(text, style: ProductTextStyles.iconRowTextStyle),
         ],
       ),
     );

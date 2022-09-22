@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:recipe_ui/constants/consts.dart';
+import 'package:recipe_ui/constants/text_styles.dart';
 import 'package:recipe_ui/product/dummy_data.dart';
 
 class CategoriesRow extends StatelessWidget {
@@ -20,8 +21,8 @@ class CategoriesRow extends StatelessWidget {
               onPressed: () {},
               icon: const Icon(
                 Icons.route,
-                color: Colors.white,
-                size: 35,
+                color: Constants.iconColor,
+                size: Constants.bigIconSize,
               ),
             ),
             ListView.builder(
@@ -34,20 +35,13 @@ class CategoriesRow extends StatelessWidget {
                     vertical: MediaQuery.of(context).size.height * 0.015,
                     horizontal: MediaQuery.of(context).size.width * 0.03,
                   ),
-                  width: 60,
-                  height: 100,
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 10, 48, 69),
-                    borderRadius: BorderRadius.circular(18),
-                  ),
+                  width: Constants.categoryBoxWidth,
+                  height: Constants.categoryBoxHeight,
+                  decoration: ProductTextStyles.categoryBoxDecoration,
                   child: Center(
                       child: Text(
                     DummyData.dummyCategories[index],
-                    style: GoogleFonts.nunito(
-                      color: Colors.white,
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: ProductTextStyles.categoryTextStyle,
                   )),
                 );
               }),

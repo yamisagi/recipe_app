@@ -12,7 +12,7 @@ class ProductAppBar extends StatelessWidget with PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
         leading: IconButton(
-          iconSize: 25,
+          iconSize: Constants.iconSize,
           color: Constants.iconColor,
           onPressed: () {
             isHomePage ? null : Navigator.pop(context);
@@ -28,7 +28,7 @@ class ProductAppBar extends StatelessWidget with PreferredSizeWidget {
               onPressed: () {},
               icon: const Icon(
                 Icons.notifications,
-                size: 25,
+                size: Constants.iconSize,
                 color: Constants.iconColor,
               ),
             ),
