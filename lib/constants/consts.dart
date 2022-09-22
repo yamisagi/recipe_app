@@ -4,5 +4,9 @@ class Constants {
   // ---------STRING CONSTANTS---------
 
   // ---------COLOR CONSTANTS---------
-  static final Color scaffoldColor = Colors.deepPurple.shade200;
+  static const Color scaffoldColor = Color(0xff2F5A71);
+  static const Color iconColor = Colors.white;
+
+  // ---------EDGEINSET CONSTANTS---------
+  static const EdgeInsets alertIconPadding = EdgeInsets.only(right: 15);
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_ui/theme/theme.dart';
 
 import 'pages/home_page.dart';
 
@@ -13,9 +14,7 @@ class RecipeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.light(
-        useMaterial3: true,
-      ),
+      theme: ProductTheme.lightTheme,
       title: 'Recipe App',
       home: const HomePage(),
     );
