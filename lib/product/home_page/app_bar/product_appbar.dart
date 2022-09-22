@@ -2,18 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:recipe_ui/constants/consts.dart';
 
 class ProductAppBar extends StatelessWidget with PreferredSizeWidget {
+  final bool isHomePage;
   const ProductAppBar({
     Key? key,
+    required this.isHomePage,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
         leading: IconButton(
-          iconSize: 35,
+          iconSize: 25,
           color: Constants.iconColor,
-          onPressed: () {},
-          icon: const Icon(Icons.sort),
+          onPressed: () {
+            isHomePage ? null : Navigator.pop(context);
+          },
+          icon: isHomePage
+              ? const Icon(Icons.sort)
+              : const Icon(Icons.arrow_back_ios),
         ),
         actions: [
           Padding(
@@ -22,7 +28,7 @@ class ProductAppBar extends StatelessWidget with PreferredSizeWidget {
               onPressed: () {},
               icon: const Icon(
                 Icons.notifications,
-                size: 35,
+                size: 25,
                 color: Constants.iconColor,
               ),
             ),

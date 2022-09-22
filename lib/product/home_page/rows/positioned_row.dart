@@ -55,7 +55,7 @@ class PositionedRow extends StatelessWidget {
           IconRows(
             index: index,
             text: DummyData.items[index].foodReviews,
-            icon: Icons.local_fire_department_outlined,
+            icon: Icons.star_border,
           )
         ],
       ),
